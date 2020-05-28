@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+
+    <h2>HTML Forms</h2>
+
+<form>
+
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="lname">Age:</label><br>
+  <input type="text" id="age" name="age"><br><br>
+
+
+  <button type="button" value="Submit"onclick="aboutYou()">info</button>
+</form> 
+<div>
+    <p id="result"></p> 
+
+
+
+</div>
+
+
+
+    <script>
+        function aboutYou(fname,lname,age){
+            var fname=document.getElementById("fname").value;
+            var lname=document.getElementById("lname").value;
+            var age=document.getElementById("age").value;
+            if (fname.length>5){
+                document.getElementById("result").style.background="green";
+                
+            }else{
+                document.getElementById("result").style.background="red"; 
+            }
+            document.getElementById("result").innerHTML="Mein Name ist "+fname+" und ich bin "+age+" Jahre alt";
+
+        }
+        var Vorname=document.getElementById("fname");
+
+
+
+
+    </script>
+    
+</body>
+</html>
