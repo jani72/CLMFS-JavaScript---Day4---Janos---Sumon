@@ -13,9 +13,8 @@
     <label for="lname">Age:</label><br>
     <input type="text" id="age" name="age"><br><br>
     <select name="profession" id="profession">
-        <option id="IT" name="IT" value="1">IT</option>
-        <option id="Hospitality" name="Hospitality" value="2">Hospitality</option>
-        <option>Ski Instructor</option>
+        <option value="IT">IT</option>
+        <option value="Hospitality">Hospitality</option>
       </select>
       
   
@@ -36,6 +35,7 @@
         var lname=document.getElementById("lname").value;
         var age=document.getElementById("age").value;
         var a=document.getElementById("profession").value;
+        console.log(a);
         switch(a){
             case("IT"):
             document.getElementById("result").style.background="purple";
@@ -47,7 +47,7 @@
             document.getElementById("result").style.color="green";
          
         }
-        document.getElementById("result").innerHTML="Mein Name ist "+fname+" und ich bin "+age+" Jahre alt und ich arbeite als" +profession;
+        document.getElementById("result").innerHTML="Mein Name ist "+fname +" "+lname+" und ich bin "+age+" Jahre alt und ich arbeite als " +a;
 
     }
     
