@@ -13,13 +13,49 @@
     <label for="lname">Age:</label><br>
     <input type="text" id="age" name="age"><br><br>
     <select name="profession" id="profession">
-        <option>IT</option>
-        <option>Hospitality</option>
+        <option id="IT" name="IT" value="1">IT</option>
+        <option id="Hospitality" name="Hospitality" value="2">Hospitality</option>
+        <option>Ski Instructor</option>
       </select>
       
   
     <button type="button" value="Submit"onclick="aboutYou()">info</button>
   </form> 
+
+  <div>
+    <p id="result"></p> 
+
+
+
+    </div>
+
+
+  <script>
+    function aboutYou(fname,lname,age){
+        var fname=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        var age=document.getElementById("age").value;
+        var a=document.getElementById("profession").value;
+        switch(a){
+            case("IT"):
+            document.getElementById("result").style.background="purple";
+            break;
+            case("Hospitality"):
+            document.getElementById("result").style.background="yellow";
+            break;
+            default:
+            document.getElementById("result").style.color="green";
+         
+        }
+        document.getElementById("result").innerHTML="Mein Name ist "+fname+" und ich bin "+age+" Jahre alt und ich arbeite als" +profession;
+
+    }
+    
+
+
+
+
+</script>
     
 </body>
 </html>
